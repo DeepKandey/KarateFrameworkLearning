@@ -47,3 +47,4 @@ Scenario: request user details from Page 2
 	And match foo == test
 	And match foo != test1
 	Then print 'authInfo--', authInfo.response
+	* def result = call read('ScenarioCall.feature@tag1')
