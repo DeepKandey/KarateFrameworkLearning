@@ -1,4 +1,4 @@
-@ignore
+@ignore 
 Feature: Java Functions 
 
 Scenario: call java method 
@@ -15,9 +15,9 @@ Scenario: call java method
 	And def data = response.data 
 	And def myFun = 
 		"""
-function(arg){
-	for(i=0; i< arg.length; i++){
-		if(arg[i].id == 9){
+    function(arg){
+	 for(i=0; i< arg.length; i++){
+		 if(arg[i].id == 9){
 			return arg[i].email
 		}
 	}

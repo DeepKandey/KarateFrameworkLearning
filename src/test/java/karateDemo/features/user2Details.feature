@@ -16,4 +16,4 @@ Scenario: request user 2 details
 	Given def job_code = response.data.jobcode 
 	And match job_code == null 
 	And def sleep = function(millis){ java.lang.Thread.sleep(millis) }
-    #And eval sleep(10000)
+    And eval sleep(1000)

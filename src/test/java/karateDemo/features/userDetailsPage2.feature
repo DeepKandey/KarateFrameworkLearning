@@ -1,3 +1,4 @@
+@ignore
 Feature: user Details Page2 
 
 Background: 
@@ -7,7 +8,7 @@ Scenario: request user details from Page 2
 	Given url url 
 	When method GET 
 	Then status 200 
-	And def data = response.data 
+	And def data = response.data
 	Then print 'data--',data 
 	And def myFun = 
 		"""
@@ -40,3 +41,9 @@ Scenario: request user details from Page 2
 	Then print 'numberOfUsers---', numberOfUsers 
 	Then print 'firstUserID---', firstUserID 
 	Then print 'User6Details---', User6Details 
+	And def foo = {hello:'world',learn:'karate'} 
+	And def test = {hello:'world',learn:'karate'} 
+	And def test1 = {hello:'world'} 
+	And match foo == test
+	And match foo != test1
+	Then print 'authInfo--', authInfo.response

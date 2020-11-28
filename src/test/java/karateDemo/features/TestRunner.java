@@ -24,7 +24,7 @@ public class TestRunner {
 
 	@Test
 	public void testParallel() {
-		Results results = Runner.path("classpath:KarateDemo").tags("~@ignore").parallel(5);
+		Results results = Runner.path("classpath:karateDemo").tags("~@ignore").parallel(5);
 		// Results results = Runner.path("classpath:").tags("~@ignore").parallel(3);
 		generateReport(results.getReportDir());
 		assertTrue(results.getErrorMessages(), results.getFailCount() == 0);

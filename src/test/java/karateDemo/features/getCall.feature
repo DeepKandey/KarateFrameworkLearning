@@ -10,7 +10,7 @@ Scenario: request user 3 details
 	Then status 200 
 	And def myfun = function(){return 'Hello'} 
 	And def returnedData = call myfun 
-	Then print 'returnedData',returnedData 
+	Then print 'returnedData--', returnedData 
 	And def myfun2 =
 	"""
 	function(){
@@ -18,6 +18,6 @@ Scenario: request user 3 details
 	}
 	"""
 	And def returnedData2 = call myfun2
-	Then print 'returnedData2',returnedData2
+	Then print 'returnedData2--', returnedData2
 	
 	
