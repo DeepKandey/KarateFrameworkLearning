@@ -4,7 +4,7 @@ Feature: user Details
 Background: 
 	Given def expectedOutput = read('../data/result.json') 
 	
-Scenario: 
+Scenario: request user 3 details
 	Given url 'https://reqres.in/api/users/3' 
 	When method GET 
 	Then status 200 

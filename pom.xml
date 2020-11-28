@@ -87,5 +87,15 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
+
+		<testResources>
+			<testResource>
+				<directory>src/test/java</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</testResource>
+		</testResources>
+
 	</build>
 </project>
