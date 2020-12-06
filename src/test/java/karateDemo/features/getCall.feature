@@ -3,9 +3,10 @@ Feature: user Details
 
 Background: 
 	Given def expectedOutput = read('../data/result.json') 
+	And url 'https://reqres.in' 
 	
 Scenario: request user 3 details
-	Given url 'https://reqres.in/api/users/3' 
+	Given path '/api/users/3'
 	When method GET 
 	Then status 200 
 	And def myfun = function(){return 'Hello'} 

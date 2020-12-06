@@ -4,8 +4,8 @@ Feature: connection to database
 Background:
 # use jdbc to validate
 * def config = { username: 'root', password: '1234', url: 'jdbc:mysql://localhost:3306/telusko', driverClassName: 'com.mysql.jdbc.Driver' }
-* def DbUtils = Java.type('karateDemo.features.DBUtils2')
-* def db = new DbUtils(config)
+* def DBUtils = Java.type('karateDemo.features.DBUtils2')
+* def db = new DBUtils(config)
 
 Scenario:
 * def students = db.readRows('select * from student')

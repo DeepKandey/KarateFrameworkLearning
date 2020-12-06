@@ -2,8 +2,8 @@
 Feature: post call test 
 
 Background: 
-	Given def jsonPayload = read('../data/createUser.json') 
-	And url 'https://reqres.in/api/users' 
+	Given url 'https://reqres.in/api/users'
+	And def jsonPayload = read('../data/createUser.json')  
 	And header Content-Type = 'application/json' 
 	
 Scenario: create user details 

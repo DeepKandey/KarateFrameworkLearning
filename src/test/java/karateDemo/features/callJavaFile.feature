@@ -3,11 +3,11 @@ Feature: Java Functions
 
 Scenario: call java method 
 	Given def javaDemo = Java.type('karateDemo.features.JavaFunctions') 
-	And def result = new javaDemo().nonstaticFunctions(); 
-	And def result1 = new javaDemo().argumentCheck("Deepak"); 
-	Then print result1 
-	And match result1 == 'Hello Deepak' 
-	And def result2 = javaDemo.staticFunctions(); 
+	And def nonstaticFunctionsResult = new javaDemo().nonstaticFunctions(); 
+	And def argumentCheckResult = new javaDemo().argumentCheck("Deepak"); 
+	Then print argumentCheckResult 
+	And match argumentCheckrRsult == 'Hello Deepak' 
+	And def staticFunctionsResult = javaDemo.staticFunctions(); 
 	
 	Given url 'https://reqres.in/api/users?page=2' 
 	When method GET 
